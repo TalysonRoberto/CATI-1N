@@ -1,0 +1,350 @@
+/* Defina o estilo básico para a imagem que seguirá o mouse */
+#followImage {
+    position: absolute;
+    width: 15px; /* Ajuste o tamanho da imagem conforme necessário */
+    pointer-events: none; /* Evita que a imagem bloqueie cliques em outros elementos */
+    transition: transform 0.3s ease; /* Suaviza e atrasa o movimento */
+    z-index: 1000; /* Mantém a imagem acima dos outros elementos */
+}
+
+/*-----------------------------------------------------------------------------------*/
+     /* Estilos da Navbar */
+     .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 70px; /* Altura da navbar */
+        z-index: 1000;
+        background-image: url('Imagens/navibar.png'); /* Caminho da imagem de fundo */
+        background-size: cover; /* Faz com que a imagem preencha toda a navbar */
+        background-position: center; /* Centraliza a imagem */
+        background-repeat: no-repeat; /* Evita repetição da imagem */
+    }
+
+    /* Links ou outros conteúdos na Navbar */
+    .navbar-content {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centraliza horizontalmente */
+        height: 100%;
+        gap: 20px; /* Espaço entre os links */
+        color: white;
+        font-size: 18px;
+    }
+
+    .navbar-content a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+
+    .navbar-content a:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Destaque ao passar o mouse */
+    }
+
+    /* Espaço adicional para o conteúdo, pois a navbar é fixa */
+    .content {
+        margin-top: 70px; /* Altura da navbar para o conteúdo abaixo */
+        padding: 20px;
+    }
+
+    .biblia_cati{
+        background-color: #0ab40a;
+        border-radius: 5px;
+    }
+    .biblia_cati:hover {
+        border: solid 2px #0ab40a; /* Borda verde */
+        border-radius: 5px; /* Mantém bordas arredondadas */
+        box-shadow: 0 0 15px #0ab40a, 0 0 30px #0ab40a, 0 0 45px #0ab40a; /* Efeito neon */
+        transform: scale(1.1); /* Amplia levemente o botão */
+    }
+/*-----------------------------------------------------------------------------------*/
+
+
+/* Espaço adicional para o conteúdo, pois a navbar é fixa */
+.content {
+    margin-top: 70px; /* Altura da navbar para o conteúdo abaixo */
+    padding: 20px;
+}
+
+/* Estilos básicos para a página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+.main-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1; /* Coloca a imagem atrás do iframe */
+    
+}
+
+.main-content{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1; /* Coloca a imagem atrás do iframe */  
+}
+
+
+.iframe-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 70px; /* Adiciona o espaço de 70px no topo */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+    border: none;
+    z-index: 5; /* Coloca o iframe acima da imagem */
+}
+
+/*--------------------------------------------------------------*/
+.overlay_{
+    position: absolute;
+    bottom: 0px;
+    right: 58%;
+    width: 220px;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 8px;
+    max-width: 300px;
+    z-index: 2; /* Coloca o overlay acima da imagem */
+    font-size: 10px;  
+}
+
+.overlay h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.category {
+    margin-bottom: 10px;
+}
+
+a{
+  color: #a1e3a1;
+}
+.category-title {
+    font-weight: bold;
+    margin-bottom: 2px;
+    color: #a1e3a1;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    font-size: 13px;
+}
+
+td {
+    padding: 2px 0;
+    color: #e6ffe6;
+}
+
+td:nth-child(1) {
+    font-weight: normal;
+}
+
+td:nth-child(2) {
+    text-align: right;
+    font-style: italic;
+    color: #b0ffb0;
+}
+
+/*--------------------------------------------------------------*/
+
+.carousel-container {
+    position: absolute;
+    top: 26%;
+    right: 35px;
+    width: 270px;
+    height: 160px;
+    overflow: hidden; /* Oculta os slides que estão fora da área visível */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    border-radius: 5px;
+    transform: translateY(-44%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza transformações */
+}
+
+.carousel-container:hover {
+    transform: scale(1.1) translateY(-50%); /* Mantém o centro ao fazer o zoom */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Aumenta a sombra no hover */
+}
+
+.carousel-slides {
+    display: flex; /* Permite que os slides sejam alinhados em uma linha */
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%; /* Cada slide ocupa 100% da largura do container */
+    box-sizing: border-box;
+    display: none; /* Oculta todos os slides inicialmente */
+}
+
+/* Exibe apenas o slide atual */
+.slide.active {
+    display: block; /* Apenas o slide ativo deve ser exibido */
+    
+}
+
+/*--------------------------------------------------------------*/
+
+.image-localize-se {
+    width: 270px;             /* Largura do retângulo */
+    height: 60px;            /* Altura do retângulo */
+    right: 35px;
+    top: 43%;
+    overflow: hidden;          /* Oculta partes da imagem fora do contêiner */
+    border-radius: 8px;        /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra */
+    position: absolute;        /* Permite posicionar com precisão */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza transformações */
+    z-index: 2;
+}
+
+.image-localize-se:hover {
+    transform: scale(1.1) translateY(-50%); /* Mantém o centro ao fazer o zoom */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Aumenta a sombra no hover */
+}
+
+.image-localize-se img {
+    max-width: 100%;          /* Limita a largura máxima ao contêiner */
+    max-height: 100%;         /* Limita a altura máxima ao contêiner */
+    object-fit: cover;        /* Ajusta a imagem para preencher o contêiner */
+    position: relative;
+}
+
+.image-cna {
+    width: 270px;              /* Largura do retângulo */
+    height: 60px;              /* Altura do retângulo */
+    right: 35px;               /* Alinhamento à direita */
+    top: 53%;                  /* Posicionamento vertical */
+    overflow: hidden;          /* Oculta partes da imagem fora do contêiner */
+    border-radius: 8px;        /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra */
+    position: absolute;        /* Permite posicionar com precisão */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza transformações */
+    z-index: 2;
+}
+
+.image-cna:hover {
+    transform: scale(1.1) translateY(-50%); /* Mantém o centro ao fazer o zoom */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Aumenta a sombra no hover */
+}
+
+.image-cna img {
+    max-width: 100%;          /* Ajusta a largura ao tamanho do contêiner */
+    max-height: 100%;         /* Ajusta a altura ao tamanho do contêiner */
+    object-fit: cover;        /* Faz a imagem preencher o espaço sem distorção */
+}
+
+
+
+/*--------------------------------------------------------------*/
+
+.circle-container {
+    position: absolute;
+    width: 40px; /* Ajuste o tamanho conforme necessário */
+    height: 40px;
+    left: 43.5%;
+    top: 25%;
+    z-index: 3;
+    transition: all 0.5s ease; /* Transição suave de 0.5 segundos */
+}
+
+.main-circle {
+    position: relative;
+    width: 395px; /* Ajuste o tamanho conforme necessário */
+    height: 390px;
+    background-image: url('icons/menu_cati.png'); /* Imagem do círculo principal */
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease; /* Transição suave de 0.5 segundos */
+}
+
+
+.main-circle:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.sub-circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Tornar invisível inicialmente */
+    transition: opacity 0.3s;
+    pointer-events: none; /* Não pode ser interagido quando invisível */
+}
+
+/* Classe que mantém os subcírculos visíveis */
+.sub-circle.visible {
+    opacity: 1; /* Visível quando a classe é adicionada */
+    pointer-events: auto; /* Permite interações quando visíveis */
+}
+
+/* Exibir sub-círculos apenas quando o mouse estiver sobre o círculo principal */
+.main-circle:hover .sub-circle {
+    opacity: 1; /* Garante que os subcírculos apareçam quando o mouse está sobre o círculo principal */
+    pointer-events: auto; /* Permite interações quando visíveis */
+}
+
+.linha_menu{
+    background-image: url('Imagens/linha_menu.png');
+    width: 490px; /* Ajuste o tamanho conforme necessário */
+    height: 490px;
+    border-radius: 50%;
+}
+
+
+/* Posicionamento em arco de 180 graus */
+.assyst { background-image: url('icons/Assyst.png'); top: -15px; left: 25px; }
+.admrh { background-image: url('icons/admrh.png'); top: -55px; left: 85px; width: 60px; height: 60px; }
+.email { background-image: url('icons/email.png'); top: -65px; left: 170px; }
+.malote { background-image: url('icons/Malote.png'); top: -55px; left: 245px; }
+.ponto { background-image: url('icons/ponto.png'); top: -20px; left: 315px;}
+
+.cpa{ background-image: url('icons/cpa.png'); top: 30px; left: 370px;}
+.saa { background-image: url('icons/SAA.png'); top: 105px; left: 400px; }
+.toki { background-image: url('icons/toki.png'); top:180px;left: 405px; }
+.itom { background-image: url('icons/itom.png'); top:254px ;left: 395px; }
+.zabbix { background-image: url('icons/zabbix.png'); top:313px ;left: 362px;}
+
+/*----------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1250px) {
+    .circle-container {
+        left: 30%;
+    }
+    .image-localize-se {
+        width: 200px;
+    }
+    .image-cna {
+        width: 200px;
+    }
+    .carousel-container {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .circle-container {
+        left: 5%;
+    }
+}

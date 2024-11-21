@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icons/cati_pag.png">
+    <title>CATI 1N</title>
+</head>
+<body>
+
+   <!-- Navbar com imagem de fundo -->
+   <div class="navbar">
+    <div class="navbar-content">
+        <!-- Conteúdo da Navbar, como links e logotipo -->
+       
+        <div>
+            <a onclick="loadHome()">Início</a>
+            <a onclick="loadPage('https://docs.google.com/spreadsheets/d/1mm_uVu1Nsb69E7sF_sSk_blCOsMBymmbUV785D9sBqU/edit?gid=1709288872#gid=1709288872')">Polos</a>
+            <a onclick="loadPage('https://sistemas-internet.tjce.jus.br/internet/contatos/pdf.asp')">Linsta de Contatos</a>
+            <a class="biblia_cati" onclick="window.open('https://lanlinkonline-my.sharepoint.com.mcas.ms/:w:/g/personal/pablo_sousa_lanlink_com_br/ERhAKzmHmxJLiGDq_m6aiS0BZVt6JHvkBHFoduHfToKobg?e=gvAFDv')">Bíblia da CATI</a>
+        </div>  
+        </div>
+    </div>
+
+     <!-- Área principal de exibição do conteúdo -->
+     <div class="main-content">
+        <img id="contentImage" src="Imagens/inicial_n1.png" alt="Imagem Inicial">
+
+    <div class="circle-container">
+        <div class="main-circle">
+                <div class="sub-circle linha_menu"></div>
+                <div class="sub-circle assyst" onclick="window.open('https://cati.tjce.jus.br/assystweb/application.do', '_blank')"></div>
+                <div class="sub-circle admrh" onclick="window.open('https://admrh.tjce.jus.br/rhsysweb/secure/XcpExecObjForm.xhtml?com.xcape.codObjeto=fichaFuncional_2N_TJCE ', '_blank')"></div>
+                <div class="sub-circle email" onclick="window.open('https://login.microsoftonline.com', '_blank')"></div>
+                <div class="sub-circle malote" onclick="window.open('https://hermes.tjce.jus.br/organizacional/goto.jsf', '_blank')"></div>
+                <div class="sub-circle ponto" onclick="window.open('https://app2.pontomais.com.br/login', '_blank')"></div>
+                <div class="sub-circle cpa" onclick="window.open('http://sajadm.tj.ce.gov.br/sajadm/', '_blank')"></div>
+                <div class="sub-circle saa" onclick="window.open(' https://portaladmin.tjce.jus.br/saa-web/pages/administracao/usuario.jsf', '_blank')"></div>
+                <div class="sub-circle toki" onclick="window.open('https://toki.lanlink.com.br/index.php?redirect=%2Ffront%2Fhelpdesk.public.php', '_blank')"></div>
+                <div class="sub-circle zabbix" onclick="window.open('https://10.1.1.55/zabbix/zabbix.php?action=dashboard.view&ddreset=1', '_blank')"></div>
+                <div class="sub-circle cna" onclick="window.open(' https://cna.oab.org.br/ ', '_blank')"></div>
+                <div class="sub-circle itom" onclick="window.open('http://itom/assystITAM/LoginPage.do?logout', '_blank')"></div>
+        </div>
+    </div>
+    
+   
+         <div id="infoOverlay" class="overlay_">
+            <h3>Contatos</h3>
+            <div class="contact-category">
+                <p class="category-title">CIAT</p>
+                <table>
+                    <tr><td>Telefone:</td><td>(85) 3108-1999</td></tr>
+                </table>
+            </div>
+            <div class="contact-category">
+                <p class="category-title">CAJ</p>
+                <table>
+                    <tr><td>Telefone</td><td> (85) 3108-2000 </td></tr>
+                    <tr><td>Whatsapp</td><td> (85) 98869-1236 </td></tr>
+                </table>
+            </div>
+        </div>
+       
+        
+        <div class="carousel-container">
+            <div class="carousel-slides">
+        
+                <div class="slide">
+                    <a href="https://www.tjce.jus.br/calendario/" target="_blank">
+                        <img src="./Imagens/calendário.png" alt="Slide 1">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="https://tjnet/" target="_blank">
+                        <img src="./Imagens/tjnet.png" alt="Slide 2">
+                    </a>
+                </div>
+    
+            </div>
+        </div>
+
+        <div class="image-localize-se">
+            <a href="http://10.150.1.10/localize/index-intra.asp" target="_blank">
+                <img src="Imagens/localiza-se.png" alt="Imagem no retângulo">
+            </a>
+        </div>
+
+        <div class="image-cna">
+            <a href=" https://cna.oab.org.br/ " target="_blank">
+                <img src="Imagens/CNA.png" alt="Imagem no retângulo">
+            </a>
+        </div>
+
+
+        <iframe id="contentFrame" class="iframe-container" src="" style="display: none;"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
