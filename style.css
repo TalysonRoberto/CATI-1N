@@ -13,7 +13,7 @@
 /*-----------------------------------------------------------------------------------*/
  /* Navbar */
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     height: 70px; /* Altura da navbar */
@@ -169,7 +169,7 @@ body {
     position: absolute; /* Fixa o retângulo na tela */
     bottom: 0; /* Fica na parte inferior */
     right: 0; /* Fica na parte direita */
-    width: 1650px; /* Largura do retângulo */
+    width: 85%; /* Largura do retângulo */
     height: 170px; /* Altura do retângulo */
     background: linear-gradient(to top, #5F9037, #5c9729); /* Degradê do azul escuro para o azul claro */
     border-top-left-radius: 70px; /* Arredonda a ponta superior esquerda */
@@ -180,7 +180,7 @@ body {
     position: absolute; /* Fixa o retângulo na tela */
     bottom: 0; /* Fica na parte inferior */
     right: 0; /* Fica na parte direita */
-    width: 1050px; /* Largura do retângulo */
+    width: 70%; /* Largura do retângulo */
     height: 170px; /* Altura do retângulo */
     background: linear-gradient(to top, #1B62A0, #30558A); /* Degradê do azul escuro para o azul claro */
     right: 300px;
@@ -482,24 +482,13 @@ td:nth-child(2) {
         transform: translateX(-50%) scale(1.1); /* Aumenta a escala ao passar o mouse */
     }
 
-
     .rectangle {
         top: 110%;
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
     }
 
     .rectangle_azul {
-        position: absolute; /* Fixa o retângulo na tela */
-        bottom: 0; /* Fica na parte inferior */
-        right: 0; /* Fica na parte direita */
-        width: 1050px; /* Largura do retângulo */
-        height: 170px; /* Altura do retângulo */
-        background: linear-gradient(to top, #1B62A0, #30558A); /* Degradê do azul escuro para o azul claro */
-        right: 0;
         left: 50%; /* Centraliza horizontalmente */
         transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
-        z-index: 1;
     }
 
 
@@ -542,7 +531,7 @@ td:nth-child(2) {
         top: 128%; /* Posiciona 80% a partir do topo */
     }
     .rectangle {
-        top: 140%;
+        top: 138%;
     }
     .overlay_{
         top: 140%;
@@ -556,8 +545,8 @@ td:nth-child(2) {
         height: 290px; /* Altura do círculo principal */
     }
 
-      /* Imagem centralizada */
-      .center-image {
+    /* Imagem centralizada */
+    .center-image {
         max-width: 475px; /* Define um tamanho máximo para a largura */
         max-height: 190px; /* Define um tamanho máximo para a altura */
     }
@@ -588,5 +577,81 @@ td:nth-child(2) {
 .itom { background-image: url('icons/itom.png'); top:190px ;left: 305px; }
 .zabbix { background-image: url('icons/zabbix.png'); top:240px ;left: 275px;}
 
+
+}
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+    /* Navbar */
+    .navbar {
+        width: 100%;
+    }
+    .menu-items {
+        width: 100%;
+    }
+    .rectangle {
+        top: 120%;
+        width: 100%;
+    }
+    .rectangle_azul {
+        width: 100%;
+    }
+    .overlay_{
+        top: 122%;
+    }
+    
+
+     /* Imagem centralizada */
+     .center-image {
+        top:13%;
+        max-width: 275px; /* Define um tamanho máximo para a largura */
+        max-height: 110px; /* Define um tamanho máximo para a altura */
+    }
+
+    .circle-container {
+        width: 195px; /* Largura do círculo principal */
+        height: 190px; /* Altura do círculo principal */
+        top: 40%;
+    }
+
+    .sub-circle {
+        width: 35px;
+        height: 35px;
+    }
+
+    .linha_menu{
+        width: 290px; /* Ajuste o tamanho conforme necessário */
+        height: 290px;
+    }
+
+    .assyst { background-image: url('icons/Assyst.png'); top: -35px; left:-5px; }
+    .admrh { background-image: url('icons/admrh.png'); top: -63px; left: 30px; width: 45px; height: 45px; }
+    .email { background-image: url('icons/email.png'); top: -65px; left: 85px; }
+    .malote { background-image: url('icons/Malote.png'); top: -53px; left: 135px; }
+    .ponto { background-image: url('icons/ponto.png'); top: -30px; left: 175px;}
+
+    .cpa{ background-image: url('icons/cpa.png'); top: 5px; left: 200px;}
+    .saa { background-image: url('icons/SAA.png'); top: 43px; left: 215px; }
+    .toki { background-image: url('icons/toki.png'); top:85px;left: 220px; }
+    .itom { background-image: url('icons/itom.png'); top:125px ;left: 215px; }
+    .zabbix { background-image: url('icons/zabbix.png'); top:160px ;left: 190px;}
+
+    .image-proc {
+        top: 70%; /* Centraliza verticalmente */
+    }
+    
+    .carousel-container {
+        top: 71%; /* Posiciona 70% a partir do topo */
+    }
+
+    .image-localize-se {
+        top: 95%; /* Posiciona 80% a partir do topo */
+    }
+    .image-cna {
+        top: 105%; /* Posiciona 80% a partir do topo */
+    }
+    
+    .image-cna:hover {
+        transform: translateX(-50%) scale(1.1); /* Aumenta a escala ao passar o mouse */
+    }
 
 }
