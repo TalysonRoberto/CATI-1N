@@ -531,10 +531,10 @@ td:nth-child(2) {
         top: 128%; /* Posiciona 80% a partir do topo */
     }
     .rectangle {
-        top: 138%;
+        top: 139%;
     }
     .overlay_{
-        top: 140%;
+        top: 141%;
     }
     
 }
@@ -580,25 +580,7 @@ td:nth-child(2) {
 
 }
 
-@media screen and (max-width: 360px) and (max-height: 740px) {
-    /* Navbar */
-    .navbar {
-        width: 100%;
-    }
-    .menu-items {
-        width: 100%;
-    }
-    .rectangle {
-        top: 120%;
-        width: 100%;
-    }
-    .rectangle_azul {
-        width: 100%;
-    }
-    .overlay_{
-        top: 122%;
-    }
-    
+@media screen and (max-width: 490px) {
 
      /* Imagem centralizada */
      .center-image {
@@ -607,6 +589,22 @@ td:nth-child(2) {
         max-height: 110px; /* Define um tamanho máximo para a altura */
     }
 
+    .image-proc {
+        top: 70%; /* Centraliza verticalmente */
+        height: 320px;
+    }
+    
+    .carousel-container {
+        top: 71%; /* Posiciona 70% a partir do topo */
+    }
+
+    .image-localize-se {
+        top: 91%; /* Posiciona 80% a partir do topo */
+    }
+    .image-cna {
+        top: 99%; /* Posiciona 80% a partir do topo */
+    }
+    
     .circle-container {
         width: 195px; /* Largura do círculo principal */
         height: 190px; /* Altura do círculo principal */
@@ -635,23 +633,12 @@ td:nth-child(2) {
     .itom { background-image: url('icons/itom.png'); top:125px ;left: 215px; }
     .zabbix { background-image: url('icons/zabbix.png'); top:160px ;left: 190px;}
 
-    .image-proc {
-        top: 70%; /* Centraliza verticalmente */
+    .rectangle {
+        width: 100%;
+        top: 110%;
     }
-    
-    .carousel-container {
-        top: 71%; /* Posiciona 70% a partir do topo */
-    }
-
-    .image-localize-se {
-        top: 95%; /* Posiciona 80% a partir do topo */
-    }
-    .image-cna {
-        top: 105%; /* Posiciona 80% a partir do topo */
-    }
-    
-    .image-cna:hover {
-        transform: translateX(-50%) scale(1.1); /* Aumenta a escala ao passar o mouse */
+    .overlay_{
+        top: 110%;
     }
 
 }
