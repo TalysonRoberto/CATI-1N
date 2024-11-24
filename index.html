@@ -11,21 +11,26 @@
 
    <!-- Navbar com imagem de fundo -->
    <div class="navbar">
-    <div class="navbar-content">
-        <!-- Conteúdo da Navbar, como links e logotipo -->
-       
-        <div>
-            <a onclick="loadHome()">Início</a>
-            <a onclick="loadPage('https://docs.google.com/spreadsheets/d/1mm_uVu1Nsb69E7sF_sSk_blCOsMBymmbUV785D9sBqU/edit?gid=1709288872#gid=1709288872')">Polos</a>
-            <a onclick="loadPage('https://sistemas-internet.tjce.jus.br/internet/contatos/pdf.asp')">Linsta de Contatos</a>
-            <a class="biblia_cati" onclick="window.open('https://lanlinkonline-my.sharepoint.com.mcas.ms/:w:/g/personal/pablo_sousa_lanlink_com_br/ERhAKzmHmxJLiGDq_m6aiS0BZVt6JHvkBHFoduHfToKobg?e=gvAFDv')">Bíblia da CATI</a>
-        </div>  
+        <div class="navbar-logo">
+            <img src="Imagens/logo_nav.png" alt="Logo" />
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- Ícone do menu -->
+        <div class="menu-items">
+            <a class="menu-link" onclick="loadHome()">Início</a>
+            <a class="menu-link" onclick="loadPage('https://docs.google.com/spreadsheets/d/1mm_uVu1Nsb69E7sF_sSk_blCOsMBymmbUV785D9sBqU/edit?gid=1709288872#gid=1709288872')">Polos</a>
+            <a class="menu-link" onclick="loadPage('https://sistemas-internet.tjce.jus.br/internet/contatos/pdf.asp')">Lista de Contatos</a>
+            <a class="menu-link biblia_cati" onclick="window.open('https://lanlinkonline-my.sharepoint.com.mcas.ms/:w:/g/personal/pablo_sousa_lanlink_com_br/ERhAKzmHmxJLiGDq_m6aiS0BZVt6JHvkBHFoduHfToKobg?e=gvAFDv')">Bíblia da CATI</a>
         </div>
     </div>
 
+
      <!-- Área principal de exibição do conteúdo -->
      <div class="main-content">
-        <img id="contentImage" src="Imagens/inicial_n1.png" alt="Imagem Inicial">
+        <img id="contentImage" src="Imagens/nova_inicial_n1.png" alt="Imagem Inicial">
+
+        <div class="image-container">
+            <img src="Imagens/logo_conteudo.png" alt="Imagem no meio da tela" class="center-image" />
+        </div>
 
     <div class="circle-container">
         <div class="main-circle">
@@ -45,6 +50,10 @@
     </div>
     
    
+        <div class="rectangle">
+            <div class="rectangle_azul" ></div>
+        </div>
+
          <div id="infoOverlay" class="overlay_">
             <h3>Contatos</h3>
             <div class="contact-category">
@@ -62,6 +71,10 @@
             </div>
         </div>
        
+        <div class="image-proc">
+            <img src="Imagens/imag_proc.png" alt="Imagem Central Direita" class="center-right-image">
+        </div>
+        
         
         <div class="carousel-container">
             <div class="carousel-slides">

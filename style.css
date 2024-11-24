@@ -1,65 +1,123 @@
-/* Defina o estilo básico para a imagem que seguirá o mouse */
-#followImage {
-    position: absolute;
-    width: 15px; /* Ajuste o tamanho da imagem conforme necessário */
-    pointer-events: none; /* Evita que a imagem bloqueie cliques em outros elementos */
-    transition: transform 0.3s ease; /* Suaviza e atrasa o movimento */
-    z-index: 1000; /* Mantém a imagem acima dos outros elementos */
+/*-----------------------------------------------------------------------------------*/
+ /* IMAGEM FUNDO */
+#contentImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Largura total da janela */
+    height: 100vh; /* Altura total da janela */
+    object-fit: cover; /* Ajusta para cobrir toda a tela sem distorção */
+    z-index: -1; /* Mantém a imagem no fundo */
 }
 
 /*-----------------------------------------------------------------------------------*/
-     /* Estilos da Navbar */
-     .navbar {
+ /* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px; /* Altura da navbar */
+    z-index: 1000;
+    background-image: url('Imagens/navibar.png'); /* Caminho da imagem de fundo */
+    background-size: cover; /* Faz com que a imagem preencha toda a navbar */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+
+/* Imagem no lado esquerdo */
+.navbar-logo img {
+    height: 50px; /* Tamanho da imagem */
+    width: auto;
+    padding: 10px 20px;
+}
+
+/* Itens do menu (alinhados à direita) */
+.menu-items {
+    margin-top: -90px; /* Altura da navbar para o conteúdo abaixo */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    height: 100%;
+    gap: 20px; /* Espaço entre os links */
+    color: white;
+    font-size: 18px;
+}
+
+.menu-items a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+}
+
+.menu-items a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.biblia_cati{
+    background-color: #0ab40a;
+    border-radius: 5px;
+}
+.biblia_cati:hover {
+    border: solid 2px #0ab40a; /* Borda verde */
+    border-radius: 5px; /* Mantém bordas arredondadas */
+    box-shadow: 0 0 15px #0ab40a, 0 0 30px #0ab40a, 0 0 45px #0ab40a; /* Efeito neon */
+    transform: scale(1.1); /* Amplia levemente o botão */
+}
+
+/* Botão do menu hambúrguer */
+.menu-toggle {
+    display: none; /* Oculto em telas grandes */
+    font-size: 24px; /* Tamanho do ícone do hambúrguer */
+    color: white; /* Cor do ícone */
+    cursor: pointer; /* Aponta que o botão é clicável */
+    z-index: 1001; /* Certifique-se de que ele está acima do menu */
+}
+
+/* Exibe o botão hambúrguer em telas menores */
+@media screen and (max-width: 1028px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
         position: fixed;
-        top: 0;
+        top: 160px;
+        right: 0;
         width: 100%;
-        height: 70px; /* Altura da navbar */
-        z-index: 1000;
-        background-image: url('Imagens/navibar.png'); /* Caminho da imagem de fundo */
-        background-size: cover; /* Faz com que a imagem preencha toda a navbar */
-        background-position: center; /* Centraliza a imagem */
-        background-repeat: no-repeat; /* Evita repetição da imagem */
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        gap: 10px;
+        height: 210px;
     }
 
-    /* Links ou outros conteúdos na Navbar */
-    .navbar-content {
+    .menu-items.show {
         display: flex;
-        align-items: center;
-        justify-content: center; /* Centraliza horizontalmente */
-        height: 100%;
-        gap: 20px; /* Espaço entre os links */
-        color: white;
-        font-size: 18px;
     }
+}
 
-    .navbar-content a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 15px;
-    }
-
-    .navbar-content a:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Destaque ao passar o mouse */
-    }
-
-    /* Espaço adicional para o conteúdo, pois a navbar é fixa */
-    .content {
-        margin-top: 70px; /* Altura da navbar para o conteúdo abaixo */
-        padding: 20px;
-    }
-
-    .biblia_cati{
-        background-color: #0ab40a;
-        border-radius: 5px;
-    }
-    .biblia_cati:hover {
-        border: solid 2px #0ab40a; /* Borda verde */
-        border-radius: 5px; /* Mantém bordas arredondadas */
-        box-shadow: 0 0 15px #0ab40a, 0 0 30px #0ab40a, 0 0 45px #0ab40a; /* Efeito neon */
-        transform: scale(1.1); /* Amplia levemente o botão */
-    }
 /*-----------------------------------------------------------------------------------*/
 
+
+/* Estilo do contêiner principal */
+.image-container {
+    position: relative;
+    height: 100vh; /* Ocupa a altura total da tela */
+}
+
+/* Imagem centralizada */
+.center-image {
+    position: absolute;
+    top: 35%; /* Centraliza verticalmente */
+    left: 80px; /* Posiciona um pouco à esquerda */
+    max-width: 675px; /* Define um tamanho máximo para a largura */
+    max-height: 270px; /* Define um tamanho máximo para a altura */
+}
 
 /* Espaço adicional para o conteúdo, pois a navbar é fixa */
 .content {
@@ -105,6 +163,32 @@ body {
 }
 
 /*--------------------------------------------------------------*/
+
+/* Estilo do retângulo */
+.rectangle {
+    position: absolute; /* Fixa o retângulo na tela */
+    bottom: 0; /* Fica na parte inferior */
+    right: 0; /* Fica na parte direita */
+    width: 1650px; /* Largura do retângulo */
+    height: 170px; /* Altura do retângulo */
+    background: linear-gradient(to top, #5F9037, #5c9729); /* Degradê do azul escuro para o azul claro */
+    border-top-left-radius: 70px; /* Arredonda a ponta superior esquerda */
+    z-index: 1;
+}
+
+.rectangle_azul {
+    position: absolute; /* Fixa o retângulo na tela */
+    bottom: 0; /* Fica na parte inferior */
+    right: 0; /* Fica na parte direita */
+    width: 1050px; /* Largura do retângulo */
+    height: 170px; /* Altura do retângulo */
+    background: linear-gradient(to top, #1B62A0, #30558A); /* Degradê do azul escuro para o azul claro */
+    right: 300px;
+    z-index: 1;
+}
+
+/*--------------------------------------------------------------*/
+
 .overlay_{
     position: absolute;
     bottom: 0px;
@@ -197,6 +281,28 @@ td:nth-child(2) {
 
 /*--------------------------------------------------------------*/
 
+/* Contêiner da imagem */
+.image-proc {
+    width: 800px;             /* Largura do retângulo */
+    height: 710px;            /* Altura do retângulo */
+    position: fixed; /* Mantém a posição fixa na tela */
+    top: 50%; /* Centraliza verticalmente */
+    right: 0; /* Alinha à direita */
+    transform: translateY(-50%); /* Compensa para centralizar perfeitamente */
+}
+
+/* Imagem */
+.center-right-image {
+    max-width: 100%; /* Ajusta a largura automaticamente */
+    height: auto; /* Mantém as proporções */
+    max-height: 90vh; /* Limita a altura da imagem a 90% da altura da tela */
+    padding-right: 10px; /* Espaçamento da borda direita */
+}
+
+
+
+/*--------------------------------------------------------------*/
+
 .image-localize-se {
     width: 270px;             /* Largura do retângulo */
     height: 60px;            /* Altura do retângulo */
@@ -254,18 +360,16 @@ td:nth-child(2) {
 
 .circle-container {
     position: absolute;
-    width: 40px; /* Ajuste o tamanho conforme necessário */
-    height: 40px;
-    left: 43.5%;
-    top: 25%;
+    width: 395px; /* Largura do círculo principal */
+    height: 390px; /* Altura do círculo principal */
+    left: 800px;
+    top: 25%; /* Ajuste conforme necessário */
     z-index: 3;
-    transition: all 0.5s ease; /* Transição suave de 0.5 segundos */
 }
 
 .main-circle {
-    position: relative;
-    width: 395px; /* Ajuste o tamanho conforme necessário */
-    height: 390px;
+    width: 100%; /* Usa 100% da largura do contêiner */
+    height: 100%; /* Usa 100% da altura do contêiner */
     background-image: url('icons/menu_cati.png'); /* Imagem do círculo principal */
     background-size: cover;
     background-position: center;
@@ -273,9 +377,8 @@ td:nth-child(2) {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease; /* Transição suave de 0.5 segundos */
+    transition: transform 0.3s;
 }
-
 
 .main-circle:hover {
     transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
@@ -326,25 +429,164 @@ td:nth-child(2) {
 .itom { background-image: url('icons/itom.png'); top:254px ;left: 395px; }
 .zabbix { background-image: url('icons/zabbix.png'); top:313px ;left: 362px;}
 
-/*----------------------------------------------------------------------------*/
 
-@media screen and (max-width: 1250px) {
-    .circle-container {
-        left: 30%;
+
+/* Exibe o botão hambúrguer em telas menores */
+@media screen and (max-width: 1600px) {
+
+    .image-proc {
+        width: 98%;             /* Largura do retângulo */
+        height: 348px;            /* Altura do retângulo */
+        position: absolute; /* Mantém a posição fixa na tela */
+        top: 68%; /* Centraliza verticalmente */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
     }
-    .image-localize-se {
-        width: 200px;
-    }
-    .image-cna {
-        width: 200px;
-    }
+    
     .carousel-container {
-        width: 200px;
+        position: absolute;
+        top: 70%; /* Posiciona 70% a partir do topo */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
+        width: 60%; /* Largura de 90% da tela */
+        height: 160px;
     }
+
+    .carousel-container:hover {
+        transform: translateX(-50%) scale(1.1); /* Aumenta a escala ao passar o mouse */
+    }
+    
+    .image-localize-se {
+        position: absolute;
+        top: 90%; /* Posiciona 80% a partir do topo */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
+        width: 60%; /* Largura de 90% da tela */
+        height: 60px;
+    }
+
+    .image-localize-se:hover {
+        transform: translateX(-50%) scale(1.1); /* Aumenta a escala ao passar o mouse */
+    }
+
+    .image-cna {
+        position: absolute;
+        top: 98%; /* Posiciona 80% a partir do topo */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
+        width: 60%; /* Largura de 90% da tela */
+        height: 60px;
+    }
+    
+    .image-cna:hover {
+        transform: translateX(-50%) scale(1.1); /* Aumenta a escala ao passar o mouse */
+    }
+
+
+    .rectangle {
+        top: 110%;
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
+    }
+
+    .rectangle_azul {
+        position: absolute; /* Fixa o retângulo na tela */
+        bottom: 0; /* Fica na parte inferior */
+        right: 0; /* Fica na parte direita */
+        width: 1050px; /* Largura do retângulo */
+        height: 170px; /* Altura do retângulo */
+        background: linear-gradient(to top, #1B62A0, #30558A); /* Degradê do azul escuro para o azul claro */
+        right: 0;
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
+        z-index: 1;
+    }
+
+
+    .overlay_{
+        top: 110%;
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
+    }
+
 }
 
-@media screen and (max-width: 1000px) {
-    .circle-container {
-        left: 5%;
+@media screen and (max-width: 1300px) {
+
+     .circle-container {
+        position: absolute;
+        top: 55%;
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para o centro exato */
     }
+
+    /* Imagem centralizada */
+    .center-image {
+        top: 15%;
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para o centro exato */
+    }
+
+    .image-proc {
+        top: 99%; /* Centraliza verticalmente */
+    }
+    .carousel-container {
+        top: 101%; /* Posiciona 70% a partir do topo */
+    }
+
+    .image-localize-se {
+        top: 120%; /* Posiciona 80% a partir do topo */
+    }
+
+    .image-cna {
+        top: 128%; /* Posiciona 80% a partir do topo */
+    }
+    .rectangle {
+        top: 140%;
+    }
+    .overlay_{
+        top: 140%;
+    }
+    
+}
+
+@media screen and (max-width: 720px) {
+    .circle-container {
+        width: 295px; /* Largura do círculo principal */
+        height: 290px; /* Altura do círculo principal */
+    }
+
+      /* Imagem centralizada */
+      .center-image {
+        max-width: 475px; /* Define um tamanho máximo para a largura */
+        max-height: 190px; /* Define um tamanho máximo para a altura */
+    }
+
+    .sub-circle {
+        width: 45px;
+        height: 45px;
+    }
+
+    .linha_menu{
+        background-image: url('Imagens/linha_menu.png');
+        width: 390px; /* Ajuste o tamanho conforme necessário */
+        height: 390px;
+        border-radius: 50%;
+    }
+
+  
+/* Posicionamento em arco de 180 graus */
+.assyst { background-image: url('icons/Assyst.png'); top: -25px; left:5px; }
+.admrh { background-image: url('icons/admrh.png'); top: -55px; left: 55px; width: 55px; height: 55px; }
+.email { background-image: url('icons/email.png'); top: -65px; left: 120px; }
+.malote { background-image: url('icons/Malote.png'); top: -55px; left: 185px; }
+.ponto { background-image: url('icons/ponto.png'); top: -25px; left: 245px;}
+
+.cpa{ background-image: url('icons/cpa.png'); top: 20px; left: 285px;}
+.saa { background-image: url('icons/SAA.png'); top: 75px; left: 310px; }
+.toki { background-image: url('icons/toki.png'); top:135px;left: 315px; }
+.itom { background-image: url('icons/itom.png'); top:190px ;left: 305px; }
+.zabbix { background-image: url('icons/zabbix.png'); top:240px ;left: 275px;}
+
+
 }
