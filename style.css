@@ -599,10 +599,10 @@ td:nth-child(2) {
     }
 
     .image-localize-se {
-        top: 91%; /* Posiciona 80% a partir do topo */
+        top: 93%; /* Posiciona 80% a partir do topo */
     }
     .image-cna {
-        top: 99%; /* Posiciona 80% a partir do topo */
+        top: 102%; /* Posiciona 80% a partir do topo */
     }
     
     .circle-container {
@@ -635,10 +635,12 @@ td:nth-child(2) {
 
     .rectangle {
         width: 100%;
-        top: 110%;
+        top: 113%;
     }
     .overlay_{
-        top: 110%;
+        top: 113%;
     }
 
 }
+
+
