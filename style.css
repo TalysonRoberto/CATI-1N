@@ -432,7 +432,7 @@ td:nth-child(2) {
 
 
 /* Exibe o botão hambúrguer em telas menores */
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1550px) {
 
     .image-proc {
         width: 98%;             /* Largura do retângulo */
