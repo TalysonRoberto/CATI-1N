@@ -52,6 +52,7 @@
 
 .menu-items a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
 }
 
 .biblia_cati{
@@ -164,35 +165,10 @@ body {
 
 /*--------------------------------------------------------------*/
 
-/* Estilo do retângulo */
-.rectangle {
-    position: absolute; /* Fixa o retângulo na tela */
-    bottom: 0; /* Fica na parte inferior */
-    right: 0; /* Fica na parte direita */
-    width: 85%; /* Largura do retângulo */
-    height: 170px; /* Altura do retângulo */
-    background: linear-gradient(to top, #5F9037, #5c9729); /* Degradê do azul escuro para o azul claro */
-    border-top-left-radius: 70px; /* Arredonda a ponta superior esquerda */
-    z-index: 1;
-}
-
-.rectangle_azul {
-    position: absolute; /* Fixa o retângulo na tela */
-    bottom: 0; /* Fica na parte inferior */
-    right: 0; /* Fica na parte direita */
-    width: 70%; /* Largura do retângulo */
-    height: 170px; /* Altura do retângulo */
-    background: linear-gradient(to top, #1B62A0, #30558A); /* Degradê do azul escuro para o azul claro */
-    right: 300px;
-    z-index: 1;
-}
-
-/*--------------------------------------------------------------*/
-
 .overlay_{
     position: absolute;
-    bottom: 0px;
-    right: 58%;
+    top: 20px;
+    left: 50px;
     width: 220px;
     color: rgb(255, 255, 255);
     padding: 5px 10px;
@@ -285,7 +261,7 @@ td:nth-child(2) {
 .image-proc {
     width: 800px;             /* Largura do retângulo */
     height: 710px;            /* Altura do retângulo */
-    position: fixed; /* Mantém a posição fixa na tela */
+    position: absolute; /* Mantém a posição fixa na tela */
     top: 50%; /* Centraliza verticalmente */
     right: 0; /* Alinha à direita */
     transform: translateY(-50%); /* Compensa para centralizar perfeitamente */
@@ -296,9 +272,7 @@ td:nth-child(2) {
     max-width: 100%; /* Ajusta a largura automaticamente */
     height: auto; /* Mantém as proporções */
     max-height: 90vh; /* Limita a altura da imagem a 90% da altura da tela */
-    padding-right: 10px; /* Espaçamento da borda direita */
 }
-
 
 
 /*--------------------------------------------------------------*/
@@ -307,7 +281,7 @@ td:nth-child(2) {
     width: 270px;             /* Largura do retângulo */
     height: 60px;            /* Altura do retângulo */
     right: 35px;
-    top: 43%;
+    top: 45%;
     overflow: hidden;          /* Oculta partes da imagem fora do contêiner */
     border-radius: 8px;        /* Cantos arredondados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra */
@@ -333,7 +307,7 @@ td:nth-child(2) {
     width: 270px;              /* Largura do retângulo */
     height: 60px;              /* Altura do retângulo */
     right: 35px;               /* Alinhamento à direita */
-    top: 53%;                  /* Posicionamento vertical */
+    top: 55%;                  /* Posicionamento vertical */
     overflow: hidden;          /* Oculta partes da imagem fora do contêiner */
     border-radius: 8px;        /* Cantos arredondados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra */
@@ -430,70 +404,83 @@ td:nth-child(2) {
 .zabbix { background-image: url('icons/zabbix.png'); top:313px ;left: 362px;}
 
 
+/*--------------------------------------------------------------*/
+
+/* Estilo do retângulo */
+.rectangle {
+    position: absolute; /* Fixa o retângulo na tela */
+    bottom: 0; /* Fica na parte inferior */
+    right: 0; /* Fica na parte direita */
+    width: 85%; /* Largura do retângulo */
+    height: 170px; /* Altura do retângulo */
+    background: linear-gradient(to top, #5F9037, #5c9729); /* Degradê do azul escuro para o azul claro */
+    border-top-left-radius: 70px; /* Arredonda a ponta superior esquerda */
+    z-index: 1;
+}
+
+.rectangle_azul {
+    position: absolute;
+    bottom: 0; /* Fica na parte inferior */
+    right: 0; /* Fica na parte direita */
+    width: 70%; /* Largura do retângulo */
+    height: 170px; /* Altura do retângulo */
+    background: linear-gradient(to top, #1B62A0, #30558A); /* Degradê do azul escuro para o azul claro */
+    right: 300px;
+    z-index: 1;
+}
+
 
 /* Exibe o botão hambúrguer em telas menores */
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1600px) {
 
+    .iframe-container {
+        height: 1550px;
+    }
+
+    /* Contêiner da imagem */
     .image-proc {
-        width: 98%;             /* Largura do retângulo */
+        width: 80%;             /* Largura do retângulo */
+        height: 400px;            /* Altura do retângulo */
+        top: 700px;
+        width: 100%;             /* Largura do retângulo */
         height: 348px;            /* Altura do retângulo */
-        position: absolute; /* Mantém a posição fixa na tela */
-        top: 68%; /* Centraliza verticalmente */
         left: 50%; /* Centraliza horizontalmente */
         transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
-    }
-    
-    .carousel-container {
-        position: absolute;
-        top: 70%; /* Posiciona 70% a partir do topo */
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
-        width: 60%; /* Largura de 90% da tela */
-        height: 160px;
     }
 
-    .carousel-container:hover {
-        transform: translateX(-50%) scale(1.1); /* Aumenta a escala ao passar o mouse */
-    }
-    
-    .image-localize-se {
-        position: absolute;
-        top: 90%; /* Posiciona 80% a partir do topo */
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
-        width: 60%; /* Largura de 90% da tela */
-        height: 60px;
+    /* Estilo do retângulo */
+    .rectangle {
+        bottom: -400px; /* Fica na parte inferior */
     }
 
+    .carousel-container{
+        top:20px;
+        width: 60%; /* Largura de 90% da tela */
+        left: 50%;
+        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
+        height: 130px;
+    }
+
+    .image-cna{
+        top:170px;
+        width: 60%; /* Largura de 90% da tela */
+        left: 50%;
+        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
+    }
+
+    .image-localize-se{
+        top:250px;
+        width: 60%; /* Largura de 90% da tela */
+        left: 50%;
+        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
+    }
+    .carousel-container:hover,
+    .image-cna:hover,
     .image-localize-se:hover {
         transform: translateX(-50%) scale(1.1); /* Aumenta a escala ao passar o mouse */
     }
 
-    .image-cna {
-        position: absolute;
-        top: 98%; /* Posiciona 80% a partir do topo */
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
-        width: 60%; /* Largura de 90% da tela */
-        height: 60px;
-    }
-    
-    .image-cna:hover {
-        transform: translateX(-50%) scale(1.1); /* Aumenta a escala ao passar o mouse */
-    }
-
-    .rectangle {
-        top: 110%;
-    }
-
     .rectangle_azul {
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
-    }
-
-
-    .overlay_{
-        top: 110%;
         left: 50%; /* Centraliza horizontalmente */
         transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
     }
@@ -502,44 +489,41 @@ td:nth-child(2) {
 
 @media screen and (max-width: 1300px) {
 
-     .circle-container {
+    .circle-container {
         position: absolute;
-        top: 55%;
+        top: 500px;
         left: 50%; /* Centraliza horizontalmente */
         transform: translateX(-50%); /* Ajusta para o centro exato */
     }
 
     /* Imagem centralizada */
     .center-image {
-        top: 15%;
+        top: 130px;
         left: 50%; /* Centraliza horizontalmente */
         transform: translateX(-50%); /* Ajusta para o centro exato */
     }
 
-    .image-proc {
-        top: 99%; /* Centraliza verticalmente */
-    }
-    .carousel-container {
-        top: 101%; /* Posiciona 70% a partir do topo */
-    }
-
-    .image-localize-se {
-        top: 120%; /* Posiciona 80% a partir do topo */
-    }
-
-    .image-cna {
-        top: 128%; /* Posiciona 80% a partir do topo */
-    }
-    .rectangle {
-        top: 139%;
-    }
-    .overlay_{
-        top: 141%;
-    }
     
+    /* Contêiner da imagem */
+    .image-proc {
+        width: 80%;             /* Largura do retângulo */
+        height: 400px;            /* Altura do retângulo */
+        top: 950px;
+        width: 100%;             /* Largura do retângulo */
+        height: 348px;            /* Altura do retângulo */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio */
+    }
+   
+    .rectangle {
+        top: 1350px;
+    }
+
+     
 }
 
 @media screen and (max-width: 720px) {
+
     .circle-container {
         width: 295px; /* Largura do círculo principal */
         height: 290px; /* Altura do círculo principal */
@@ -562,7 +546,7 @@ td:nth-child(2) {
         height: 390px;
         border-radius: 50%;
     }
-
+    
   
 /* Posicionamento em arco de 180 graus */
 .assyst { background-image: url('icons/Assyst.png'); top: -25px; left:5px; }
@@ -580,67 +564,5 @@ td:nth-child(2) {
 
 }
 
-@media screen and (max-width: 490px) {
-
-     /* Imagem centralizada */
-     .center-image {
-        top:13%;
-        max-width: 275px; /* Define um tamanho máximo para a largura */
-        max-height: 110px; /* Define um tamanho máximo para a altura */
-    }
-
-    .image-proc {
-        top: 70%; /* Centraliza verticalmente */
-        height: 320px;
-    }
-    
-    .carousel-container {
-        top: 71%; /* Posiciona 70% a partir do topo */
-    }
-
-    .image-localize-se {
-        top: 93%; /* Posiciona 80% a partir do topo */
-    }
-    .image-cna {
-        top: 102%; /* Posiciona 80% a partir do topo */
-    }
-    
-    .circle-container {
-        width: 195px; /* Largura do círculo principal */
-        height: 190px; /* Altura do círculo principal */
-        top: 40%;
-    }
-
-    .sub-circle {
-        width: 35px;
-        height: 35px;
-    }
-
-    .linha_menu{
-        width: 290px; /* Ajuste o tamanho conforme necessário */
-        height: 290px;
-    }
-
-    .assyst { background-image: url('icons/Assyst.png'); top: -35px; left:-5px; }
-    .admrh { background-image: url('icons/admrh.png'); top: -63px; left: 30px; width: 45px; height: 45px; }
-    .email { background-image: url('icons/email.png'); top: -65px; left: 85px; }
-    .malote { background-image: url('icons/Malote.png'); top: -53px; left: 135px; }
-    .ponto { background-image: url('icons/ponto.png'); top: -30px; left: 175px;}
-
-    .cpa{ background-image: url('icons/cpa.png'); top: 5px; left: 200px;}
-    .saa { background-image: url('icons/SAA.png'); top: 43px; left: 215px; }
-    .toki { background-image: url('icons/toki.png'); top:85px;left: 220px; }
-    .itom { background-image: url('icons/itom.png'); top:125px ;left: 215px; }
-    .zabbix { background-image: url('icons/zabbix.png'); top:160px ;left: 190px;}
-
-    .rectangle {
-        width: 100%;
-        top: 113%;
-    }
-    .overlay_{
-        top: 113%;
-    }
-
-}
 
 
