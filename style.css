@@ -168,7 +168,7 @@ body {
 .overlay_{
     position: absolute;
     top: 20px;
-    left: 50px;
+    left: 20px;
     width: 220px;
     color: rgb(255, 255, 255);
     padding: 5px 10px;
@@ -566,3 +566,55 @@ td:nth-child(2) {
 
 
 
+@media screen and (max-width: 490px) {
+
+
+    .image-proc {
+        top: 600px;
+    }
+   
+    .rectangle {
+        top: 1000px;
+    }
+
+    /* Imagem centralizada */
+    .center-image {
+       top:130px;
+       max-width: 275px; /* Define um tamanho máximo para a largura */
+       max-height: 110px; /* Define um tamanho máximo para a altura */
+   }
+
+   .circle-container {
+       width: 195px; /* Largura do círculo principal */
+       height: 190px; /* Altura do círculo principal */
+       top: 40%;
+   }
+
+   .sub-circle {
+       width: 35px;
+       height: 35px;
+   }
+
+   .linha_menu{
+       width: 290px; /* Ajuste o tamanho conforme necessário */
+       height: 290px;
+   }
+
+   .assyst { background-image: url('icons/Assyst.png'); top: -35px; left:-5px; }
+   .admrh { background-image: url('icons/admrh.png'); top: -63px; left: 30px; width: 45px; height: 45px; }
+   .email { background-image: url('icons/email.png'); top: -65px; left: 85px; }
+   .malote { background-image: url('icons/Malote.png'); top: -53px; left: 135px; }
+   .ponto { background-image: url('icons/ponto.png'); top: -30px; left: 175px;}
+
+   .cpa{ background-image: url('icons/cpa.png'); top: 5px; left: 200px;}
+   .saa { background-image: url('icons/SAA.png'); top: 43px; left: 215px; }
+   .toki { background-image: url('icons/toki.png'); top:85px;left: 220px; }
+   .itom { background-image: url('icons/itom.png'); top:125px ;left: 215px; }
+   .zabbix { background-image: url('icons/zabbix.png'); top:160px ;left: 190px;}
+
+
+   .overlay_{
+    left: 5px; 
+}
+
+}
