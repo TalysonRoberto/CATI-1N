@@ -1,0 +1,84 @@
+@media screen and (max-width: 1530px){
+    .logo_cati{
+        display: none;
+    }
+    .contente{
+        display: grid;
+        justify-content: center; /* Centraliza na horizontal */
+        align-items: center; /* Centraliza na vertical */
+        gap: 10px;
+    }
+    .menu{
+        display: flex;
+        flex-wrap: wrap; /* Permite que os elementos quebrem linha */
+        justify-content: center; /* Centraliza na horizontal */
+        align-items: center; /* Centraliza na vertical */
+        width: 100%;
+    }
+    nav{
+        margin: 0;
+        width: 100%; 
+    }
+
+    .menu:hover {
+        width: 100%;
+    }
+
+    .nome_option{
+        display: none;
+    }
+
+    .menu:hover .nome_option {
+        display: none;
+        opacity: 0;
+        width:0;
+    }
+}
+
+@media screen and (max-width: 1194px){
+    article{
+        width:100%;
+        margin: 0;
+    }
+    .iframe-container{
+        width:100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 940px){
+    .menu_contato{
+        display: flex;
+        flex-wrap: wrap; /* Permite que os elementos quebrem linha */
+        display: grid;
+    }
+
+    section{
+        display: grid;
+    }
+    article{
+        height: 1050px;
+    }
+    
+    .iframe-container{
+        height: 1050px;
+    }
+   
+}
+
+@media screen and (max-width: 610px){
+
+    .logo_nome{
+        height: 100px;
+        width: 300px;
+    }
+    .center-image {
+        height: 100px;
+        width: 300px;
+    }
+
+    .menu{
+        width: 100%;
+    }
+    
+}

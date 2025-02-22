@@ -1,0 +1,262 @@
+body {
+    font-family: "DM Sans", sans-serif;
+    display: grid;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    height: 97vh; /* Opcional: Ocupa 100% da altura da tela */
+    background: url('./Imagens/Home.png') no-repeat center center fixed;
+    background-size: cover;
+    cursor: url('./cursor/cursor.png'), auto;
+}
+/*--------------------------------------------------------------------------*/
+.contente{
+    display: flex;
+    width: 100%;
+}
+/*--------------------------------------------------------------------------*/
+nav{
+    display: flex;
+    align-items: center; /* Centraliza na vertical */
+    width:350px; 
+    margin: 10px;
+}
+
+.menu{
+    color: #fff;
+    display: grid;
+    gap:30px;
+    align-items: center; /* Centraliza na vertical */
+    width:55px; 
+    border-radius: 20px;
+    padding: 20px 10px;
+    background: linear-gradient(45deg, #601b7b61 ,#906fa98f); /* Fundo semitransparente */
+    backdrop-filter: blur(10px); /* Aplica o desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+.menu:hover{
+    width:200px; 
+}
+
+.menu:hover .nome_option {
+    display: flex;
+    opacity: 1;
+    width:40%;
+}
+
+.menu_selec{
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+}
+
+.menu_selec.home{
+    font-size: 30px;
+    border-radius: 50%;
+    background:#0c5bd27d;
+}
+
+.menu_selec.Bíblia{background-image: url('icons/bíblia.png'); }
+.menu_selec.TJNET{background-image: url('icons/tjnet.png'); }
+.menu_selec.CNA{background-image: url('icons/cna.png'); }
+.menu_selec.Contatos{font-size: 30px; background:#fff; color: #0faf9a;}
+.menu_selec.Calendário{font-size: 30px; background:#fff; color: #0faf9a;}
+.menu_selec.Polos{background-image: url('icons/polos.png'); }
+
+.options{
+    display: flex;
+    gap:20px;
+    align-items: center; /* Centraliza na vertical */ 
+}
+
+.options:hover{
+    transform: scale(1.05);
+}
+
+.nome_option{
+    display: flex;
+    align-items: center; /* Centraliza na vertical */
+    justify-content: center; /* Centraliza na horizontal */ 
+    padding: 10px 20px;
+    width:0px;
+    opacity: 0;
+    transition: width 1s ease-in-out, background-color 2s ease-in-out, transform 2s ease;
+}
+
+.logo_cati{
+    position: absolute;
+    margin-left: 100px;
+    width: 255px; /* Ajuste conforme necessário */
+    height: 250px; /* Ajuste conforme necessário */
+    background-image: url('icons/menu_cati.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/*--------------------------------------------------------------------------*/
+article{
+    display: grid;
+    align-items: center; /* Centraliza na horizontal */
+    justify-items: center; /* Centraliza na vertical */
+    width: 1150px;
+    height: 650px;
+    border-radius: 20px;
+    transition: width 1s ease-in-out, background-color 2s ease-in-out, transform 2s ease;
+
+}
+
+.iframe-container{
+    display: grid;
+    align-items: center; /* Centraliza na horizontal */
+    justify-items: center; /* Centraliza na vertical */
+    width: 1150px;
+    height: 650px;
+    border-radius: 20px;
+    border: none;
+    transition: width 1s ease-in-out, background-color 2s ease-in-out, transform 2s ease;
+
+}
+
+.article_org{
+    display: grid;
+    gap:50px;
+    align-items: center; /* Centraliza na horizontal */
+    justify-items: center; /* Centraliza na vertical */
+}
+
+.logo_nome{
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    height: 200px;
+    width: 600px;
+}
+
+.center-image {
+    height: 200px;
+    width: 600px
+}
+
+section{
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    gap:50px;
+    padding: 10px;
+    transition: width 1s ease-in-out, background-color 2s ease-in-out, transform 2s ease;
+
+}
+
+.conteudo{
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha */
+    gap:30px;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    padding: 10px;
+    background: linear-gradient(45deg, #601b7b61 ,#906fa98f); /* Fundo semitransparente */
+    backdrop-filter: blur(10px); /* Aplica o desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
+    transition: width 1s ease-in-out, background-color 2s ease-in-out, transform 2s ease;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+}
+
+.link_pagina{
+    height: 65px;
+    width: 65px;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease;
+}
+
+.link_pagina:hover{transform: scale(1.2);}
+.link_pagina.admrh:hover{transform: scale(1.7);}
+
+.email { background-image: url('icons/email.png'); }
+.ponto { background-image: url('icons/ponto.png');}
+.toki { background-image: url('icons/toki.png');}
+.infocati{ 
+    color:#023838 ;
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    height: 65px;
+    width: 65px;
+    font-size: 40px;
+    border-radius: 50%;
+    background:#ffffff;}
+
+
+.assyst { background-image: url('icons/Assyst.png');}
+.itom { background-image: url('icons/itom.png');}
+.zabbix { background-image: url('icons/zabbix.png');}
+.localize-se{ 
+    color:#b91b1b ;
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    height: 65px;
+    width: 65px;
+    font-size: 30px;
+    border-radius: 50%;
+    background:#ffffff;}
+
+.malote { background-image: url('icons/Malote.png');}
+.cpa{ background-image: url('icons/cpa.png');}
+.saa { background-image: url('icons/SAA.png');}
+.admrh { background-image: url('icons/admrh.png');transform: scale(1.5);}
+
+
+/*--------------------------------------------------------------------------*/
+footer{
+    display: grid;
+    color: #fff;
+    justify-content: center; /* Centraliza na horizontal */
+    justify-items: center; /* Centraliza na vertical */
+    width: 100%;
+    height: 80px;
+    font-size: 16px;
+}
+
+.contato_name{ font-size: 20px; }
+
+.menu_contato{
+    display: flex;
+    gap: 50px;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    transition: width 1s ease-in-out, background-color 2s ease-in-out, transform 2s ease;
+
+}
+
+a{color: #fff; text-decoration: none; /* Remove o sublinhado */}
+
+.contato{
+    display: grid;
+    justify-content: center; /* Centraliza na horizontal */
+    justify-items: center; /* Centraliza na vertical */
+}
+
+.contato.LOGO{
+    width: 200px; /* Ajuste conforme necessário */
+    height: 56px; /* Ajuste conforme necessário */
+    background-image: url('./Imagens/logo_nav.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}

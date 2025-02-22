@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="icon" type="image/png" href="icons/menu_cati.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>CATI 1N</title>
+</head>
+<body>
+
+    <div class="contente">
+       <nav>
+            <div class="menu">
+                <div class="options" onclick="loadHome()"><div class="menu_selec home"> <i class="fa-solid fa-house"></i> </div> <span class="nome_option">Início</span></div>
+                <div class="options" onclick="window.open('https://lanlinkonline-my.sharepoint.com.mcas.ms/:w:/g/personal/pablo_sousa_lanlink_com_br/ERhAKzmHmxJLiGDq_m6aiS0BZVt6JHvkBHFoduHfToKobg?e=gvAFDv')"><div class="menu_selec Bíblia"> </div> <span class="nome_option">Bíblia/CATI</span></div>
+                <div class="options" onclick="loadPage('https://tjnet/')"><div class="menu_selec TJNET"></div><span class="nome_option">TJNET</span></div>
+                <div class="options" onclick="loadPage('https://docs.google.com/spreadsheets/d/1mm_uVu1Nsb69E7sF_sSk_blCOsMBymmbUV785D9sBqU/edit?gid=1709288872#gid=1709288872')"><div class="menu_selec Polos"></div><span class="nome_option">Polos</span></div>
+                <div class="options" onclick="loadPage('https://sistemas-internet.tjce.jus.br/internet/contatos/pdf.asp')" ><div class="menu_selec Contatos" > <i class="fa-solid fa-phone"></i></div><span class="nome_option">Contatos</span></div>
+                <div class="options" onclick="loadPage('https://www.tjce.jus.br/calendario/')"><div class="menu_selec Calendário"><i class="fa-solid fa-calendar-days"></i></div><span class="nome_option">Calendário</span></div>
+                <div class="options" onclick="window.open('https://cna.oab.org.br/', '_blank')"><div class="menu_selec CNA"></div><span class="nome_option">CNA</span></div>
+            </div>
+            <div class="logo_cati"></div>
+       </nav>
+<!---------------------------------------------------------------->
+        <iframe id="contentFrame" class="iframe-container" src="" style="display: none;"></iframe>
+        <article id="contentImage">
+            <div class="article_org">
+                <div class="logo_nome">
+                    <img src="Imagens/logo_conteudo.png" alt="Imagem no meio da tela" class="center-image" />
+                </div>
+                <section>
+                    <div class="conteudo">
+                        <div class="link_pagina ponto" onclick="window.open('https://app2.pontomais.com.br/login', '_blank')"></div>
+                        <div class="link_pagina email" onclick="window.open('https://admrh.tjce.jus.br/rhsysweb/secure/XcpExecObjForm.xhtml?com.xcape.codObjeto=fichaFuncional_2N_TJCE ', '_blank')"></div>
+                        <div class="link_pagina toki" onclick="window.open('https://toki.lanlink.com.br/index.php?redirect=%2Ffront%2Fhelpdesk.public.php', '_blank')"></div>
+                        <div class="link_pagina infocati" onclick="loadPage('https://tjlkp03/infocati/')"><i class="fa-solid fa-circle-info"></i></i></div>
+                    </div>
+                    <div class="conteudo">
+                        <div class="link_pagina assyst" onclick="window.open('https://cati.tjce.jus.br/assystweb/application.do', '_blank')"></div>
+                        <div class="link_pagina itom" onclick="window.open('http://itom/assystITAM/LoginPage.do?logout', '_blank')"></div>
+                        <div class="link_pagina zabbix" onclick="window.open('https://10.1.1.55/zabbix/zabbix.php?action=dashboard.view&ddreset=1', '_blank')"></div>
+                        <div class="link_pagina localize-se" onclick="window.open('http://10.150.1.10/localize/index-intra.asp','_blank')"><i class="fa-solid fa-location-dot"></i></div>
+                    </div>
+                    <div class="conteudo">
+                        <div class="link_pagina malote" onclick="window.open('https://hermes.tjce.jus.br/organizacional/goto.jsf', '_blank')"></div>
+                        <div class="link_pagina cpa" onclick="window.open('http://sajadm.tj.ce.gov.br/sajadm/', '_blank')"></div>
+                        <div class="link_pagina saa" onclick="window.open(' https://portaladmin.tjce.jus.br/saa-web/pages/administracao/usuario.jsf', '_blank')"></div>
+                        <div class="link_pagina admrh" onclick="window.open('https://admrh.tjce.jus.br/rhsysweb/secure/XcpExecObjForm.xhtml?com.xcape.codObjeto=fichaFuncional_2N_TJCE ', '_blank')"></div>
+                    </div>
+                </section>
+            </div>
+       </article>
+    </div>
+<!------------------------------------------------------------------------------------------>
+    <footer>
+
+        <div class="contato_name">CONTATOS</div>
+        <div class="menu_contato">
+            <div class="contato LOGO">  </div>
+            <div class="contato">
+                <span> CIAT </span>
+                <span> Telefone: (85) 3108-1999 </span>
+            </div>
+            <div class="contato">
+                <span> CAJ</span>
+                <span> Telefone:	(85) 3108-2000</span>
+                <span> Whatsapp:	<a href="https://wa.me/5585988691236?text=Olá,%20gostaria%20de%20mais%20informações!" target="_blank"></i> (85) 98869-1236</a></span>
+            </div>
+            <div class="contato">
+                <span> CATI</span>
+                <span> Telefone:	(85) 3366-2966</span>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
